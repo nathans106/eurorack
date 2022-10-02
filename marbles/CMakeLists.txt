@@ -1,0 +1,40 @@
+project(marbles)
+cmake_minimum_required(VERSION 3.23)
+
+add_executable(marbles_exe
+	clock_self_patching_detector.h
+	cv_reader.cc
+	cv_reader.h
+	cv_reader_channel.h
+	io_buffer.h
+	marbles.cc
+	note_filter.h
+	resources.cc
+	resources.h
+	scale_recorder.h
+	settings.cc
+	settings.h
+	ui.cc
+	ui.h
+	ramp/ramp.h
+	ramp/ramp_divider.h
+	ramp/ramp_extractor.cc
+	ramp/ramp_extractor.h
+	ramp/ramp_generator.h
+	ramp/slave_ramp.h
+	random/discrete_distribution_quantizer.cc
+	random/discrete_distribution_quantizer.h
+	random/distributions.h
+	random/lag_processor.cc
+	random/lag_processor.h
+	random/output_channel.cc
+	random/output_channel.h
+	random/quantizer.cc
+	random/random_generator.h
+	random/random_sequence.h
+	random/random_stream.h
+	random/t_generator.cc
+	random/t_generator.h
+	random/x_y_generator.cc
+	random/x_y_generator.h
+)
