@@ -26,9 +26,8 @@
 //
 // Variable resolution quantizer.
 
-#include "marbles/random/quantizer.h"
-
-#include "stmlib/dsp/dsp.h"
+#include "dsp/dsp.h"
+#include "random/quantizer.h"
 
 #include <cmath>
 #include <algorithm>

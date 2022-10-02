@@ -29,11 +29,11 @@
 #ifndef MARBLES_RANDOM_QUANTIZER_H_
 #define MARBLES_RANDOM_QUANTIZER_H_
 
-#include "stmlib/stmlib.h"
-#include "stmlib/dsp/hysteresis_quantizer.h"
+#include "stmlib.h"
+#include "dsp/hysteresis_quantizer.h"
 
-#include "marbles/random/distributions.h"
-#include "marbles/random/quantizer.h"
+#include "distributions.h"
+#include "quantizer.h"
 
 namespace marbles {
 

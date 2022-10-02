@@ -26,14 +26,13 @@
 //
 // Random generation channel.
 
-#include "marbles/random/output_channel.h"
+#include "output_channel.h"
 
-#include "marbles/random/distributions.h"
-#include "marbles/random/random_sequence.h"
-
-#include "stmlib/dsp/dsp.h"
+#include "dsp/dsp.h"
 #include "stmlib/dsp/parameter_interpolator.h"
 #include "stmlib/utils/random.h"
+#include "random/distributions.h"
+#include "random/random_sequence.h"
 
 namespace marbles {
 

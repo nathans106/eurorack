@@ -30,11 +30,10 @@
 #ifndef MARBLES_RAMP_RAMP_DIVIDER_H_
 #define MARBLES_RAMP_RAMP_DIVIDER_H_
 
-#include "stmlib/stmlib.h"
+#include "stmlib.h"
+#include "ramp.h"
 
 #include <algorithm>
-
-#include "marbles/ramp/ramp.h"
 
 namespace marbles {
 

@@ -16,6 +16,7 @@ add_executable(marbles_exe
 	settings.h
 	ui.cc
 	ui.h
+	bootloader/bootloader.cc
 	ramp/ramp.h
 	ramp/ramp_divider.h
 	ramp/ramp_extractor.cc
@@ -37,4 +38,10 @@ add_executable(marbles_exe
 	random/t_generator.h
 	random/x_y_generator.cc
 	random/x_y_generator.h
+)
+
+target_link_libraries(marbles_exe
+PRIVATE
+	audio_bootloader_lib
+	stm_lib
 )

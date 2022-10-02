@@ -29,7 +29,7 @@
 #ifndef MARBLES_RAMP_RAMP_H_
 #define MARBLES_RAMP_RAMP_H_
 
-#include "stmlib/stmlib.h"
+#include "stmlib.h"
 
 namespace marbles {
 

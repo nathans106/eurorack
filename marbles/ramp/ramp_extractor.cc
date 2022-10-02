@@ -32,13 +32,13 @@
 // - Assume that the pulse width is constant, deduct the period from the on time
 //   and the pulse width.
 
-#include "marbles/ramp/ramp_extractor.h"
 
+#include "ramp_extractor.h"
+
+#include "ramp.h"
+
+#include "dsp/dsp.h"
 #include <algorithm>
-
-#include "marbles/ramp/ramp.h"
-
-#include "stmlib/dsp/dsp.h"
 
 namespace marbles {
 

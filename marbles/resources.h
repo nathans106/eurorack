@@ -33,10 +33,7 @@
 #ifndef MARBLES_RESOURCES_H_
 #define MARBLES_RESOURCES_H_
 
-
-#include "stmlib/stmlib.h"
-
-
+#include "stmlib.h"
 
 namespace marbles {
 

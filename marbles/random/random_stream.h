@@ -34,7 +34,7 @@
 
 #include "stmlib/utils/ring_buffer.h"
 
-#include "marbles/random/random_generator.h"
+#include "random/random_generator.h"
 
 namespace marbles {
 

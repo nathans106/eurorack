@@ -29,12 +29,11 @@
 #ifndef MARBLES_CV_READER_H_
 #define MARBLES_CV_READER_H_
 
-#include "stmlib/stmlib.h"
+#include "stmlib.h"
 
 #include "marbles/drivers/adc.h"
-
-#include "marbles/cv_reader_channel.h"
-#include "marbles/settings.h"
+#include "cv_reader_channel.h"
+#include "settings.h"
 
 namespace marbles {
 

@@ -31,7 +31,7 @@
 
 #include "stmlib/stmlib.h"
 
-#include "marbles/ramp/ramp.h"
+#include "ramp/ramp.h"
 
 namespace marbles {
 

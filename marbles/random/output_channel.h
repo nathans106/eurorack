@@ -29,10 +29,10 @@
 #ifndef MARBLES_RANDOM_OUTPUT_CHANNEL_H_
 #define MARBLES_RANDOM_OUTPUT_CHANNEL_H_
 
-#include "stmlib/stmlib.h"
+#include "stmlib.h"
 
-#include "marbles/random/lag_processor.h"
-#include "marbles/random/quantizer.h"
+#include "lag_processor.h"
+#include "quantizer.h"
 
 namespace marbles {
 

@@ -26,7 +26,7 @@
 //
 // Settings storage.
 
-#include "marbles/settings.h"
+#include "settings.h"
 
 #include <algorithm>
 

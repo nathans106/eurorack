@@ -38,10 +38,10 @@
 #ifndef MARBLES_RAMP_RAMP_EXTRACTOR_H_
 #define MARBLES_RAMP_RAMP_EXTRACTOR_H_
 
-#include "stmlib/stmlib.h"
-#include "stmlib/utils/gate_flags.h"
+#include "stmlib.h"
+#include "utils/gate_flags.h"
 
-#include "marbles/ramp/ramp_divider.h"
+#include "ramp_divider.h"
 
 namespace marbles {
 

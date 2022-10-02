@@ -26,7 +26,7 @@
 //
 // CV reader.
 
-#include "marbles/cv_reader.h"
+#include "cv_reader.h"
 
 #include <algorithm>
 

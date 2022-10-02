@@ -29,14 +29,14 @@
 #ifndef MARBLES_SETTINGS_H_
 #define MARBLES_SETTINGS_H_
 
-#include "stmlib/stmlib.h"
+#include "random/quantizer.h"
 
-#include "stmlib/dsp/dsp.h"
-#include "stmlib/system/storage.h"
+#include "stmlib.h"
 
 #include "marbles/drivers/adc.h"
 #include "marbles/drivers/dac.h"
-#include "marbles/random/quantizer.h"
+#include "dsp/dsp.h"
+#include "system/storage.h"
 
 namespace marbles {
   

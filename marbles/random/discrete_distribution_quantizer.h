@@ -29,10 +29,10 @@
 #ifndef MARBLES_RANDOM_DISCRETE_DISTRIBUTION_QUANTIZER_H_
 #define MARBLES_RANDOM_DISCRETE_DISTRIBUTION_QUANTIZER_H_
 
-#include "stmlib/stmlib.h"
+#include "stmlib.h"
 
-#include "marbles/random/distributions.h"
-#include "marbles/random/quantizer.h"
+#include "distributions.h"
+#include "quantizer.h"
 
 namespace marbles {
 

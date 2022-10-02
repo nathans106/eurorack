@@ -31,7 +31,7 @@
 
 #include "stmlib/stmlib.h"
 
-#include "marbles/random/random_stream.h"
+#include "random/random_stream.h"
 
 #include <algorithm>
 

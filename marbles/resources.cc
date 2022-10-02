@@ -30,7 +30,7 @@
 // make resources
 
 
-#include "marbles/resources.h"
+#include "resources.h"
 
 namespace marbles {
 

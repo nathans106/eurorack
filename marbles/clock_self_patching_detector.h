@@ -34,7 +34,7 @@
 
 #include "stmlib/stmlib.h"
 
-#include "marbles/io_buffer.h"
+#include "io_buffer.h"
 
 namespace marbles {
 

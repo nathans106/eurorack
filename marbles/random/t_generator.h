@@ -31,13 +31,13 @@
 
 #include "stmlib/stmlib.h"
 
-#include "marbles/ramp/ramp_divider.h"
-#include "marbles/ramp/ramp_extractor.h"
-#include "marbles/ramp/ramp_generator.h"
-#include "marbles/ramp/slave_ramp.h"
-#include "marbles/random/distributions.h"
-#include "marbles/random/random_sequence.h"
 #include "stmlib/dsp/hysteresis_quantizer.h"
+#include "ramp/ramp_divider.h"
+#include "ramp/ramp_extractor.h"
+#include "ramp/ramp_generator.h"
+#include "ramp/slave_ramp.h"
+#include "random/distributions.h"
+#include "random/random_sequence.h"
 
 namespace marbles {
 

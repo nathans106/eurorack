@@ -30,7 +30,7 @@
 #define MARBLES_SCALE_RECORDER_H_
 
 #include "stmlib/stmlib.h"
-#include "marbles/random/quantizer.h"
+#include "random/quantizer.h"
 
 namespace marbles {
 

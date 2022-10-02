@@ -26,12 +26,12 @@
 //
 // Lag processor for the STEPS control.
 
-#include "marbles/random/lag_processor.h"
+#include "lag_processor.h"
 
-#include "stmlib/dsp/dsp.h"
-#include "stmlib/dsp/units.h"
+#include "dsp/dsp.h"
+#include "dsp/units.h"
 
-#include "marbles/resources.h"
+#include "resources.h"
 
 namespace marbles {
 

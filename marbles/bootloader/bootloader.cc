@@ -22,8 +22,8 @@
 // 
 // See http://creativecommons.org/licenses/MIT/ for more information.
 
-#include "stmlib/system/bootloader_utils.h"
-#include "stmlib/system/system_clock.h"
+#include "system/bootloader_utils.h"
+#include "system/system_clock.h"
 
 #include "marbles/drivers/adc.h"
 #include "marbles/drivers/dac.h"
@@ -31,8 +31,8 @@
 #include "marbles/drivers/switches.h"
 #include "marbles/drivers/system.h"
 
-#include "stm_audio_bootloader/qpsk/packet_decoder.h"
-#include "stm_audio_bootloader/qpsk/demodulator.h"
+#include "qpsk/packet_decoder.h"
+#include "qpsk/demodulator.h"
 
 #include <cstring>
 

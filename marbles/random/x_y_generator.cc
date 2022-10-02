@@ -26,7 +26,7 @@
 //
 // Generator for the X/Y outputs.
 
-#include "marbles/random/x_y_generator.h"
+#include "random/x_y_generator.h"
 
 #include <algorithm>
 

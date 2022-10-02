@@ -22,8 +22,6 @@
 // 
 // See http://creativecommons.org/licenses/MIT/ for more information.
 
-#include <stm32f4xx_conf.h>
-
 #include "marbles/drivers/clock_inputs.h"
 #include "marbles/drivers/dac.h"
 #include "marbles/drivers/debug_pin.h"
@@ -31,25 +29,23 @@
 #include "marbles/drivers/gate_outputs.h"
 #include "marbles/drivers/rng.h"
 #include "marbles/drivers/system.h"
+#include "dsp/dsp.h"
+#include "dsp/hysteresis_quantizer.h"
+#include "dsp/units.h"
+#include "ramp/ramp_extractor.h"
+#include "random/random_generator.h"
+#include "random/random_stream.h"
+#include "random/t_generator.h"
+#include "random/x_y_generator.h"
 
-#include "marbles/ramp/ramp_extractor.h"
-#include "marbles/random/random_generator.h"
-#include "marbles/random/random_stream.h"
-#include "marbles/random/t_generator.h"
-#include "marbles/random/x_y_generator.h"
-
-#include "marbles/clock_self_patching_detector.h"
-#include "marbles/cv_reader.h"
-#include "marbles/io_buffer.h"
-#include "marbles/note_filter.h"
-#include "marbles/resources.h"
-#include "marbles/scale_recorder.h"
-#include "marbles/settings.h"
-#include "marbles/ui.h"
-
-#include "stmlib/dsp/dsp.h"
-#include "stmlib/dsp/hysteresis_quantizer.h"
-#include "stmlib/dsp/units.h"
+#include "clock_self_patching_detector.h"
+#include "cv_reader.h"
+#include "io_buffer.h"
+#include "note_filter.h"
+#include "resources.h"
+#include "scale_recorder.h"
+#include "settings.h"
+#include "ui.h"
 
 #define PROFILE_INTERRUPT 0
 #define PROFILE_RENDER 0

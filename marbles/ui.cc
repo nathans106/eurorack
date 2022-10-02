@@ -26,16 +26,16 @@
 //
 // User interface.
 
-#include "marbles/ui.h"
+#include "ui.h"
+
+#include "cv_reader.h"
+#include "scale_recorder.h"
 
 #include <algorithm>
 
 #include "stmlib/system/system_clock.h"
 
 #include "marbles/drivers/clock_inputs.h"
-#include "marbles/cv_reader.h"
-#include "marbles/scale_recorder.h"
-
 namespace marbles {
 
 const int32_t kLongPressDuration = 2000;

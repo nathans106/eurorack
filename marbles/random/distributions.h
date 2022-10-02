@@ -29,13 +29,12 @@
 #ifndef MARBLES_RANDOM_DISTRIBUTIONS_H_
 #define MARBLES_RANDOM_DISTRIBUTIONS_H_
 
-#include "stmlib/stmlib.h"
+#include "stmlib.h"
+#include "resources.h"
+
+#include "dsp/dsp.h"
 
 #include <algorithm>
-
-#include "stmlib/dsp/dsp.h"
-
-#include "marbles/resources.h"
 
 namespace marbles {
   

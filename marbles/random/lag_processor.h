@@ -29,7 +29,7 @@
 #ifndef MARBLES_RANDOM_LAG_PROCESSOR_H_
 #define MARBLES_RANDOM_LAG_PROCESSOR_H_
 
-#include "stmlib/stmlib.h"
+#include "stmlib.h"
 
 #include <cstdio>
 

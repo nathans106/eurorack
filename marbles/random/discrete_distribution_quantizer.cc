@@ -26,9 +26,8 @@
 //
 // Quantize voltages by sampling from a discrete distribution.
 
-#include "marbles/random/discrete_distribution_quantizer.h"
-
-#include "stmlib/dsp/dsp.h"
+#include "dsp/dsp.h"
+#include "discrete_distribution_quantizer.h"
 
 #include <cmath>
 #include <algorithm>

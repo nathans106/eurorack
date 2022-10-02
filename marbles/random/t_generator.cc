@@ -26,13 +26,12 @@
 //
 // Generator for the T outputs.
 
-#include "marbles/random/t_generator.h"
-
-#include <algorithm>
+#include "random/t_generator.h"
 
 #include "stmlib/dsp/units.h"
+#include "resources.h"
 
-#include "marbles/resources.h"
+#include <algorithm>
 
 namespace marbles {
 

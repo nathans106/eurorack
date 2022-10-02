@@ -29,8 +29,8 @@
 #ifndef MARBLES_CV_READER_CHANNEL_H_
 #define MARBLES_CV_READER_CHANNEL_H_
 
-#include "stmlib/stmlib.h"
-#include "stmlib/dsp/dsp.h"
+#include "stmlib.h"
+#include "dsp/dsp.h"
 
 namespace marbles {
 

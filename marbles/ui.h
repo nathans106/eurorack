@@ -29,6 +29,8 @@
 #ifndef MARBLES_UI_H_
 #define MARBLES_UI_H_
 
+#include "settings.h"
+
 #include "stmlib/stmlib.h"
 
 #include "stmlib/ui/event_queue.h"
@@ -36,8 +38,6 @@
 #include "marbles/drivers/adc.h"
 #include "marbles/drivers/leds.h"
 #include "marbles/drivers/switches.h"
-#include "marbles/settings.h"
-
 namespace marbles {
 
 class ClockInputs;

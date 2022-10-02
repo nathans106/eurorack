@@ -31,11 +31,11 @@
 
 #include "stmlib/stmlib.h"
 
-#include "marbles/ramp/ramp_divider.h"
-#include "marbles/ramp/ramp_extractor.h"
-#include "marbles/random/output_channel.h"
-#include "marbles/random/random_sequence.h"
-#include "marbles/random/t_generator.h"
+#include "ramp/ramp_divider.h"
+#include "ramp/ramp_extractor.h"
+#include "random/output_channel.h"
+#include "random/random_sequence.h"
+#include "random/t_generator.h"
 
 namespace marbles {
 
