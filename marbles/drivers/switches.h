@@ -26,12 +26,7 @@
 //
 // Driver for the 6 front panel switches.
 
-#ifndef MARBLES_DRIVERS_SWITCHES_H_
-#define MARBLES_DRIVERS_SWITCHES_H_
-
-#include "stmlib/stmlib.h"
-
-#include <stm32f4xx_conf.h>
+#pragma once
 
 namespace marbles {
   
@@ -47,41 +42,24 @@ enum Switch {
 };
 
 class Switches {
- public:
-  Switches() { }
-  ~Switches() { }
-  
+ public: 
   void Init();
   void Debounce();
   
   inline bool released(Switch s) const {
-    return switch_state_[s] == 0x7f;
+    return true;
   }
   
   inline bool just_pressed(Switch s) const {
-    return switch_state_[s] == 0x80;
+    return true;
   }
 
   inline bool pressed(Switch s) const {
-    return switch_state_[s] == 0x00;
+    return true;
   }
   
   inline bool pressed_immediate(Switch s) const {
-    if (s == SWITCH_T_DEJA_VU) {
-      return !GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_11);
-    } else if (s == SWITCH_X_MODE) {
-      return !GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_13);
-    } else {
-      return false;
-    }
   }
-  
- private:
-  uint8_t switch_state_[SWITCH_LAST];
-  
-  DISALLOW_COPY_AND_ASSIGN(Switches);
 };
 
 }  // namespace marbles
-
-#endif  // MARBLES_DRIVERS_SWITCHES_H_

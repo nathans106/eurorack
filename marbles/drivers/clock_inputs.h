@@ -26,8 +26,7 @@
 //
 // Driver for the two clock inputs and their normalization probe.
 
-#ifndef MARBLES_DRIVERS_CLOCK_INPUTS_H_
-#define MARBLES_DRIVERS_CLOCK_INPUTS_H_
+#pragma once
 
 #include "stmlib.h"
 #include "io_buffer.h"
@@ -42,34 +41,18 @@ enum ClockInput {
 
 class ClockInputs {
  public:
-  ClockInputs() { }
-  ~ClockInputs() { }
-  
+ 
   void Init();
   void Read(const IOBuffer::Slice& slice, size_t size);
   void ReadNormalization(IOBuffer::Block* block);
   
   bool is_normalized(ClockInput input) {
-    return normalized_[input];
+    return true;
   }
   
   bool value(ClockInput input) {
-    return previous_flags_[input] & stmlib::GATE_FLAG_HIGH;
+    return true;
   }
-
- private:
-  static const int kProbeSequenceDuration = 64;
-
-  stmlib::GateFlags previous_flags_[CLOCK_INPUT_LAST];
-
-  uint32_t normalization_probe_state_;
-  bool normalized_[CLOCK_INPUT_LAST];
-  int normalization_mismatch_count_[CLOCK_INPUT_LAST];
-  int normalization_decision_count_;
-  
-  DISALLOW_COPY_AND_ASSIGN(ClockInputs);
 };
 
 }  // namespace marbles
-
-#endif  // MARBLES_DRIVERS_CLOCK_INPUTS_H_

@@ -26,23 +26,15 @@
 //
 // System level initialization.
 
-#include "marbles/drivers/system.h"
-
-#include <stm32f4xx_conf.h>
+#include "system.h"
 
 namespace marbles {
 
 void System::Init(bool application) {
-  if (application) {
-    NVIC_SetVectorTable(NVIC_VectTab_FLASH, 0x8000);
-  }
-  IWDG_WriteAccessCmd(IWDG_WriteAccess_Enable);
-  IWDG_SetPrescaler(IWDG_Prescaler_32);
 }
 
 void System::StartTimers() {
-  SysTick_Config(F_CPU / 1000);
-  IWDG_Enable();
+
 }
 
 }  // namespace marbles

@@ -26,10 +26,7 @@
 //
 // Driver for all the LEDs.
 
-#ifndef MARBLES_DRIVERS_LEDS_H_
-#define MARBLES_DRIVERS_LEDS_H_
-
-#include "stmlib.h"
+#pragma once
 
 namespace marbles {
   
@@ -53,23 +50,13 @@ enum LedColor {
 
 class Leds {
  public:
-  Leds() { }
-  ~Leds() { }
-  
+ 
   void Init();
   void Write();
   void Clear();
   
   void set(Led led, uint32_t color) {
-    colors_[led] = color;
   }
-
- private:
-  uint32_t colors_[LED_LAST];
-  
-  DISALLOW_COPY_AND_ASSIGN(Leds);
 };
 
 }  // namespace marbles
-
-#endif  // MARBLES_DRIVERS_LEDS_H_

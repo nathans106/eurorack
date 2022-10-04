@@ -26,25 +26,14 @@
 //
 // System-level initialization.
 
-#ifndef MARBLES_DRIVERS_SYSTEM_H_
-#define MARBLES_DRIVERS_SYSTEM_H_
-
-#include "stmlib/stmlib.h"
+#pragma once
 
 namespace marbles {
 
 class System {
  public:
-  System() { }
-  ~System() { }
-  
   void Init(bool application);
   void StartTimers();
- 
- private:
-  DISALLOW_COPY_AND_ASSIGN(System);
 };
 
 }  // namespace marbles
-
-#endif  // MARBLES_DRIVERS_SYSTEM_H_

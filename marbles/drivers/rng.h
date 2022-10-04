@@ -26,37 +26,23 @@
 //
 // Driver for built-in random number generator.
 
-#ifndef MARBLES_DRIVERS_RNG_H_
-#define MARBLES_DRIVERS_RNG_H_
-
-#include "stmlib/stmlib.h"
-
-#include <stm32f4xx_conf.h>
+#pragma once
 
 namespace marbles {
 
 class Rng {
  public:
-  Rng() { }
-  ~Rng() { }
-  
   void Init() {
-    RCC_AHB2PeriphClockCmd(RCC_AHB2Periph_RNG, ENABLE);
-    RNG_Cmd(ENABLE);
+
   }
   
   inline bool readable() {
-    return RNG->SR & RNG_FLAG_DRDY;
+    return true;
   }
   
   inline uint32_t data() {
-    return RNG->DR;
+    return 0;
   }
-
- private:
-  DISALLOW_COPY_AND_ASSIGN(Rng);
 };
 
 }  // namespace marbles
-
-#endif  // MARBLES_DRIVERS_RNG_H_

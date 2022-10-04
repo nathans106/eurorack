@@ -26,61 +26,19 @@
 //
 // Driver for the two gate outputs.
 
-#ifndef MARBLES_DRIVERS_GATE_OUTPUTS_H_
-#define MARBLES_DRIVERS_GATE_OUTPUTS_H_
+#pragma once
 
-#include "stmlib/stmlib.h"
-
-#include <stm32f4xx_conf.h>
-
-#include "marbles/io_buffer.h"
+#include "io_buffer.h"
 
 namespace marbles {
 
 class GateOutputs {
  public:
-  GateOutputs() { }
-  ~GateOutputs() { }
-  
   void Init() {
-    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
-    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC, ENABLE);
-
-    GPIO_InitTypeDef gpio_init;
-    gpio_init.GPIO_Mode = GPIO_Mode_OUT;
-    gpio_init.GPIO_OType = GPIO_OType_PP;
-    gpio_init.GPIO_Speed = GPIO_Speed_2MHz;
-    gpio_init.GPIO_PuPd = GPIO_PuPd_NOPULL;
-    gpio_init.GPIO_Pin = GPIO_Pin_11 | GPIO_Pin_12;
-    GPIO_Init(GPIOA, &gpio_init);
-    
-    gpio_init.GPIO_Pin = GPIO_Pin_11;
-    GPIO_Init(GPIOC, &gpio_init);
   }
   
   inline void Write(IOBuffer::Slice s) {
-    if (s.block->gate_output[0][s.frame_index]) {
-      GPIOC->BSRRL = GPIO_Pin_11;
-    } else {
-      GPIOC->BSRRH = GPIO_Pin_11;
-    }
-    if (s.block->gate_output[1][s.frame_index]) {
-      GPIOA->BSRRL = GPIO_Pin_11;
-    } else {
-      GPIOA->BSRRH = GPIO_Pin_11;
-    }
-    if (s.block->gate_output[2][s.frame_index]) {
-      GPIOA->BSRRL = GPIO_Pin_12;
-    } else {
-      GPIOA->BSRRH = GPIO_Pin_12;
-    }
   }
-  
-
- private:
-  DISALLOW_COPY_AND_ASSIGN(GateOutputs);
 };
 
 }  // namespace marbles
-
-#endif  // MARBLES_DRIVERS_GATE_OUTPUTS_H_

@@ -26,10 +26,9 @@
 //
 // Driver for ADC. ADC1 is used for the 8 pots ; ADC2 for the 8 CV inputs.
 
-#ifndef MARBLES_DRIVERS_ADC_H_
-#define MARBLES_DRIVERS_ADC_H_
+#pragma once
 
-#include "stmlib.h"
+#include <cstdint>
 
 namespace marbles {
 
@@ -53,29 +52,19 @@ enum AdcGroup {
 
 class Adc {
  public:
-  Adc() { }
-  ~Adc() { }
-  
   void Init(bool single_channel);
   void DeInit();
   void Convert();
   
   inline float float_value(int channel) const {
-    return static_cast<float>(values_[channel]) / 65536.0f;
+    return 0;
   }
   inline uint16_t value(int channel) const {
-    return values_[channel];
+    return 0;
   }
   inline const uint16_t* values() const {
-    return &values_[0];
+    return nullptr;
   }
-  
- private:
-  uint16_t values_[ADC_CHANNEL_LAST * 2];
-  
-  DISALLOW_COPY_AND_ASSIGN(Adc);
 };
 
 }  // namespace marbles
-
-#endif  // MARBLES_DRIVERS_ADC_H_

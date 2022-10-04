@@ -48,9 +48,6 @@ const size_t kNumDacChannels = 4;
 
 class Dac {
  public:
-  Dac() { }
-  ~Dac() { }
-  
   typedef IOBuffer::Slice (*FillBufferCallback)(size_t size);
   
   void Init(int sample_rate, size_t block_size);
@@ -58,21 +55,7 @@ class Dac {
   void Stop();
   void Fill(size_t offset);
   
-  static Dac* GetInstance() { return instance_; }
-  
- private:
-  void InitializeGPIO();
-  void InitializeAudioInterface(int sample_rate);
-  void InitializeDMA(size_t block_size);
-  static Dac* instance_;
-  
-  size_t block_size_;
-  FillBufferCallback callback_;
-  
-  // There are 8 16-bit words per frame.
-  uint16_t tx_dma_buffer_[2 * kMaxDacBlockSize * kNumDacChannels * 2];
-
-  DISALLOW_COPY_AND_ASSIGN(Dac);
+  static Dac* GetInstance() { return nullptr; }
 };
 
 }  // namespace marbles

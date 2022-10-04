@@ -29,9 +29,7 @@
 #ifndef MARBLES_DRIVERS_DEBUG_PORT_H_
 #define MARBLES_DRIVERS_DEBUG_PORT_H_
 
-#include "stmlib/stmlib.h"
-
-#include <stm32f4xx_conf.h>
+#include "stmlib.h"
 
 namespace marbles {
 
@@ -41,52 +39,22 @@ class DebugPort {
   ~DebugPort() { }
   
   void Init() {
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
-    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
-  
-    // Initialize TX and RX pins.
-    GPIO_InitTypeDef gpio_init;
-    gpio_init.GPIO_Pin = GPIO_Pin_9 | GPIO_Pin_10;
-    gpio_init.GPIO_Speed = GPIO_Speed_2MHz;
-    gpio_init.GPIO_Mode = GPIO_Mode_AF;
-    gpio_init.GPIO_OType = GPIO_OType_PP;
-    gpio_init.GPIO_PuPd = GPIO_PuPd_NOPULL;
-    GPIO_Init(GPIOA, &gpio_init);
-  
-    GPIO_PinAFConfig(GPIOA, GPIO_PinSource9, GPIO_AF_USART1);
-    GPIO_PinAFConfig(GPIOA, GPIO_PinSource10, GPIO_AF_USART1);
-  
-    // Initialize USART.
-    USART_InitTypeDef usart_init;
-    usart_init.USART_BaudRate = 9600;
-    usart_init.USART_WordLength = USART_WordLength_8b;
-    usart_init.USART_StopBits = USART_StopBits_1;
-    usart_init.USART_Parity = USART_Parity_No;
-    usart_init.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
-    usart_init.USART_Mode = USART_Mode_Tx | USART_Mode_Rx;
-    USART_Init(USART1, &usart_init);
-  
-    USART_Cmd(USART1, ENABLE);
   }
   
   bool writable() {
-    return USART1->SR & USART_FLAG_TXE;
+    return true;
   }
   
   bool readable() {
-    return USART1->SR & USART_FLAG_RXNE;
+    return true;
   }
   
   void Write(uint8_t byte) {
-    USART1->DR = byte;
   }
   
   uint8_t Read() {
-    return USART1->DR;
+    return 0;
   }
-  
- private:
-  DISALLOW_COPY_AND_ASSIGN(DebugPort);
 };
 
 }  // namespace marbles

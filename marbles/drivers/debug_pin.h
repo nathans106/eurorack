@@ -26,14 +26,7 @@
 //
 // Driver for the debug (timing) pin.
 
-#ifndef MARBLES_DRIVERS_DEBUG_PIN_H_
-#define MARBLES_DRIVERS_DEBUG_PIN_H_
-
-#include "stmlib/stmlib.h"
-
-#ifndef TEST
-#include <stm32f4xx_conf.h>
-#endif 
+#pragma once
 
 namespace marbles {
 
@@ -47,30 +40,16 @@ class DebugPin {
   static void Low() { }
 #else
   static void Init() {
-    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
-  
-    GPIO_InitTypeDef gpio_init;
-    gpio_init.GPIO_Pin = GPIO_Pin_9;
-    gpio_init.GPIO_Mode = GPIO_Mode_OUT;
-    gpio_init.GPIO_OType = GPIO_OType_PP;
-    gpio_init.GPIO_Speed = GPIO_Speed_2MHz;
-    gpio_init.GPIO_PuPd = GPIO_PuPd_NOPULL;
-    GPIO_Init(GPIOA, &gpio_init);
+
   }
   static inline void High() {
-    GPIOA->BSRRL = GPIO_Pin_9;
   }
   static inline void Low() {
-    GPIOA->BSRRH = GPIO_Pin_9;
   }
 #endif
- private:
-  DISALLOW_COPY_AND_ASSIGN(DebugPin);
 };
 
 #define TIC DebugPin::High();
 #define TOC DebugPin::Low();
 
 }  // namespace marbles
-
-#endif  // MARBLES_DRIVERS_DEBUG_PIN_H_
