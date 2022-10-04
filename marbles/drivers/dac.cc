@@ -26,7 +26,7 @@
 //
 // Driver for DAC.
 
-#include "marbles/drivers/dac.h"
+#include "dac.h"
 
 #include <algorithm>
 

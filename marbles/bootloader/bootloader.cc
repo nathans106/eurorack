@@ -25,11 +25,11 @@
 #include "system/bootloader_utils.h"
 #include "system/system_clock.h"
 
-#include "marbles/drivers/adc.h"
-#include "marbles/drivers/dac.h"
-#include "marbles/drivers/leds.h"
-#include "marbles/drivers/switches.h"
-#include "marbles/drivers/system.h"
+#include "drivers/adc.h"
+#include "drivers/dac.h"
+#include "drivers/leds.h"
+#include "drivers/switches.h"
+#include "drivers/system.h"
 
 #include "qpsk/packet_decoder.h"
 #include "qpsk/demodulator.h"

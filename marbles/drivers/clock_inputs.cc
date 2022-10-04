@@ -26,9 +26,7 @@
 //
 // Driver for the two clock inputs and their normalization probe.
 
-#include "marbles/drivers/clock_inputs.h"
-
-#include <stm32f4xx_conf.h>
+#include "clock_inputs.h"
 
 namespace marbles {
 

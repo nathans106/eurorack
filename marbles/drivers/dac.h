@@ -29,11 +29,9 @@
 #ifndef MARBLES_DRIVERS_DAC_H_
 #define MARBLES_DRIVERS_DAC_H_
 
-#include "stmlib/stmlib.h"
+#include "stmlib.h"
 
-#include <stm32f4xx_conf.h>
-
-#include "marbles/io_buffer.h"
+#include "io_buffer.h"
 
 namespace marbles {
 

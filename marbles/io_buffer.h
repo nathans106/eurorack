@@ -29,8 +29,8 @@
 #ifndef MARBLES_IO_BUFFER_H_
 #define MARBLES_IO_BUFFER_H_
 
-#include "stmlib/stmlib.h"
-#include "stmlib/utils/gate_flags.h"
+#include "stmlib.h"
+#include "utils/gate_flags.h"
 
 #include <algorithm>
 

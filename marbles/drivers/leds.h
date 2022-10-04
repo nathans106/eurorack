@@ -29,7 +29,7 @@
 #ifndef MARBLES_DRIVERS_LEDS_H_
 #define MARBLES_DRIVERS_LEDS_H_
 
-#include "stmlib/stmlib.h"
+#include "stmlib.h"
 
 namespace marbles {
   

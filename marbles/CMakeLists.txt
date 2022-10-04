@@ -17,6 +17,22 @@ add_executable(marbles_exe
 	ui.cc
 	ui.h
 	bootloader/bootloader.cc
+	drivers/adc.cc
+	drivers/adc.h
+	drivers/clock_inputs.cc
+	drivers/clock_inputs.h
+	drivers/dac.cc
+	drivers/dac.h
+	drivers/debug_pin.h
+	drivers/debug_port.h
+	drivers/gate_outputs.h
+	drivers/leds.cc
+	drivers/leds.h
+	drivers/rng.h
+	drivers/switches.cc
+	drivers/switches.h
+	drivers/system.cc
+	drivers/system.h
 	ramp/ramp.h
 	ramp/ramp_divider.h
 	ramp/ramp_extractor.cc

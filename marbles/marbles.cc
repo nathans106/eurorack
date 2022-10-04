@@ -22,13 +22,13 @@
 // 
 // See http://creativecommons.org/licenses/MIT/ for more information.
 
-#include "marbles/drivers/clock_inputs.h"
-#include "marbles/drivers/dac.h"
-#include "marbles/drivers/debug_pin.h"
-#include "marbles/drivers/debug_port.h"
-#include "marbles/drivers/gate_outputs.h"
-#include "marbles/drivers/rng.h"
-#include "marbles/drivers/system.h"
+#include "drivers/clock_inputs.h"
+#include "drivers/dac.h"
+#include "drivers/debug_pin.h"
+#include "drivers/debug_port.h"
+#include "drivers/gate_outputs.h"
+#include "drivers/rng.h"
+#include "drivers/system.h"
 #include "dsp/dsp.h"
 #include "dsp/hysteresis_quantizer.h"
 #include "dsp/units.h"

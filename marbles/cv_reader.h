@@ -31,7 +31,7 @@
 
 #include "stmlib.h"
 
-#include "marbles/drivers/adc.h"
+#include "drivers/adc.h"
 #include "cv_reader_channel.h"
 #include "settings.h"
 

@@ -26,11 +26,9 @@
 //
 // Driver for all the LEDs.
 
-#include "marbles/drivers/leds.h"
+#include "leds.h"
 
 #include <algorithm>
-
-#include <stm32f4xx_conf.h>
 
 namespace marbles {
 

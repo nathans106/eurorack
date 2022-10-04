@@ -26,9 +26,7 @@
 //
 // Driver for ADC. ADC1 is used for the 8 pots ; ADC2 for the 8 CV inputs.
 
-#include "marbles/drivers/adc.h"
-
-#include <stm32f4xx_conf.h>
+#include "adc.h"
 
 namespace marbles {
   
