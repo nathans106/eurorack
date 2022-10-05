@@ -29,7 +29,7 @@
 #pragma once
 
 #include "stmlib.h"
-#include "io_buffer.h"
+#include "../io_buffer.h"
 
 namespace marbles {
 

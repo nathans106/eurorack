@@ -30,9 +30,9 @@
 #ifndef MARBLES_RANDOM_RANDOM_GENERATOR_H_
 #define MARBLES_RANDOM_RANDOM_GENERATOR_H_
 
-#include "stmlib/stmlib.h"
+#include "stmlib.h"
 
-#include "stmlib/utils/ring_buffer.h"
+#include "utils/ring_buffer.h"
 
 namespace marbles {
 

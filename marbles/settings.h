@@ -33,8 +33,8 @@
 
 #include "stmlib.h"
 
-#include "marbles/drivers/adc.h"
-#include "marbles/drivers/dac.h"
+#include "drivers/adc.h"
+#include "drivers/dac.h"
 #include "dsp/dsp.h"
 #include "system/storage.h"
 
